@@ -34,6 +34,7 @@ $("#reset").click(function(){
 
 });
 
+
 $('.calcs').click(function(){
     functionCalc=$(this).attr('target');
     let input=$("#calcInput");
