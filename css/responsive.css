@@ -1,12 +1,32 @@
-@media (max-width: 500px) {
+@media (max-width: 560px) {
   .calculator {
     width: 87%;
+    margin: 40px auto;
+  }
+
+  header {
+    grid-template-columns: 65% 35%;
+  }
+
+  #buttons .row .buttons, #buttons .last-row .buttons {
+    border-radius: 5px;
+  }
+}
+@media (max-width: 400px) {
+  header {
+    grid-template-columns: 55% 45%;
+  }
+
+  .calculator {
+    width: 87%;
+    margin: 40px auto;
   }
 }
 @media (max-width: 375px) {
-  .calculator{
+  .calculator {
     margin: 40px auto;
   }
+
   #screen {
     height: 100px;
   }
@@ -36,6 +56,11 @@
   }
   #buttons .row > .buttons:last-child, #buttons .last-row > .buttons:last-child {
     margin-right: 0;
+  }
+}
+@media (max-width: 300px) {
+  header {
+    grid-template-columns: 40% 60%;
   }
 }
 

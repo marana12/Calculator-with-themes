@@ -177,6 +177,7 @@ header{
         display: flex;
         justify-content: end;
         .text{
+            line-height: 75px;
             font-size: 14px;
             align-self: end;
             margin-right: 20px;
@@ -276,7 +277,7 @@ header{
             line-height: 70px;
             font-size: 25px;
             margin: 0 10px;
-            border-radius: 5px;
+            border-radius: 20px;
             transition: all 0.2s;
         }
     }
