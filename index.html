@@ -187,7 +187,7 @@
       console.log(value.replaceAll(',',''))
 
       value=Number(value.replaceAll(',',''));
-      let val=value.toLocaleString('en-IN');
+      let val=value.toLocaleString('en');
       
         return val.toString(); 
     }
@@ -218,7 +218,7 @@
 
       result = separeDec(resultFloat.toString());
       input.val(result);
-      
+
     }
 
     function reset() {
