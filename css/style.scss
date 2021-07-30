@@ -279,6 +279,12 @@ header{
             margin: 0 10px;
             border-radius: 20px;
             transition: all 0.2s;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none; 
+            user-select: none; 
         }
     }
     .row{

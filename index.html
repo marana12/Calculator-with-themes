@@ -85,7 +85,7 @@
         </div>
       </div>
       <div class="row">
-        <div class="number btn-calc-prod buttons" target=",">
+        <div class="number btn-calc-prod buttons" target=".">
           .
         </div>
         <div class="number btn-calc-prod buttons" target="0">
@@ -133,11 +133,14 @@
       let number = $(this).attr('target');
 
       $("#calcInput").val(function (index, value) {
-        if (number === ',') {
+        if (number === '.') {
           if (value.indexOf(number) > 0)
             return value;
+          else
+            return separeDec(value)+number;
+
         }
-        return value + number
+        return separeDec(value+ + number)
       });
     });
 
@@ -161,10 +164,10 @@
 
       if (input.val().length != 0) {
         if (result.length == 0) {
-          result = input.val().replace(',', '.')
+          result = input.val().replace(',', '')
           number1 = parseFloat(result);
         } else {
-          number1 = parseFloat(input.val().replace(',', '.'));
+          number1 = parseFloat(input.val().replace(',', ''));
           calc();
         }
         input.val('');
@@ -175,46 +178,47 @@
     $("#equals").click(function () {
       let input = $("#calcInput");
 
-      number1 = parseFloat(input.val().replace(',', '.'));
+      number1 = parseFloat(input.val().replace(',', ''));
       calc();
       reset();
     });
 
+    function separeDec(value){
+      console.log(value.replaceAll(',',''))
+
+      value=Number(value.replaceAll(',',''));
+      let val=value.toLocaleString('en-IN');
+      
+        return val.toString(); 
+    }
+
     function calc() {
       let input = $("#calcInput");
-      let resultFloat = parseFloat(result.replace(',', '.'));
+      let resultFloat = Number(result.replace(',', ''));
+      number1=Number(number1);
+
 
       switch (functionCalc) {
         case '+':
-          console.log(number1 + ' + ' + resultFloat)
-
-          resultFloat = number1 + resultFloat
-
+          resultFloat = resultFloat + number1
           break;
         case '-':
-          console.log(number1 + ' - ' + resultFloat)
-
-          resultFloat = number1 - resultFloat;
-
+          resultFloat = resultFloat - number1;
           break;
         case '/':
-          console.log(number1 + ' / ' + resultFloat)
-
-          resultFloat = number1 / resultFloat;
+          resultFloat = resultFloat / number1;
           break;
         case 'x':
-          console.log(number1 + ' * ' + resultFloat)
-
-          resultFloat = number1 * resultFloat;
+          resultFloat = resultFloat * number1;
           break;
         default:
           result = "";
           break;
       }
 
-      result = resultFloat.toString().replace('.', ',');
-
+      result = separeDec(resultFloat.toString());
       input.val(result);
+      
     }
 
     function reset() {
