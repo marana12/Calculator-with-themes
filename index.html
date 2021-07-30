@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./css/responsive.css">
+
+  <title>Frontend Mentor | Calculator app</title>
+
+</head>
+
+<body class="theme1">
+  <div class="calculator">
+    <header class="section">
+      <h1 class="title">calc</h1>
+      <div id="switch">
+        <div class="dflex">
+          <div class="text">
+            THEME
+          </div>
+          <div class="swicth-div">
+            <div id="theme-title">
+              <label>1</label>
+              <label>2</label>
+              <label>3</label>
+            </div>
+            <div id="swicth">
+              <label class="toggle-ball active" id="theme1Toggle" targ="theme1"></label>
+              <label class="toggle-ball" id="theme2Toggle" targ="theme2"></label>
+              <label class="toggle-ball" id="theme3Toggle" targ="theme3"></label>
+            </div>
+          </div>
+
+        </div>
+    </header>
+    <div id="screen" class="section">
+      <input type="text" readonly id="calcInput">
+    </div>
+    <div id="buttons" class="section">
+      <div class="row">
+        <div class="number btn-calc-prod buttons" target="7">
+          7
+        </div>
+        <div class="number btn-calc-prod buttons" target="8">
+          8
+        </div>
+        <div class="number btn-calc-prod buttons" target="9">
+          9
+        </div>
+        <div class="btn-calc-func buttons" id="delete" target="del">
+          DEL
+        </div>
+      </div>
+      <div class="row">
+        <div class="number btn-calc-prod buttons" target="4">
+          4
+        </div>
+        <div class="number btn-calc-prod buttons" target="5">
+          5
+        </div>
+        <div class="number btn-calc-prod buttons" target="6">
+          6
+        </div>
+        <div class="btn-calc-prod buttons calcs" target="+">
+          +
+        </div>
+      </div>
+      <div class="row">
+        <div class="number btn-calc-prod buttons" target="1">
+          1
+        </div>
+        <div class="number btn-calc-prod buttons" target="2">
+          2
+        </div>
+        <div class="number btn-calc-prod buttons" target="3">
+          3
+        </div>
+        <div class="btn-calc-prod buttons calcs" target="-">
+          -
+        </div>
+      </div>
+      <div class="row">
+        <div class="number btn-calc-prod buttons" target=",">
+          .
+        </div>
+        <div class="number btn-calc-prod buttons" target="0">
+          0
+        </div>
+        <div class="btn-calc-prod buttons calcs" target="/">
+          /
+        </div>
+        <div class="btn-calc-prod buttons calcs" target="x">
+          x
+        </div>
+      </div>
+      <div class="last-row">
+
+        <div class="btn-calc-func buttons" id="reset" target="reset">
+          RESET
+        </div>
+        <div class="btn-calc-equal buttons" id="equals" target="equal">
+          =
+        </div>
+      </div>
+    </div>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="https://www.frontendmentor.io/profile/marana12">Julio Mizrahi</a>.
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+  <script src="/JS/js.js"></script>
+</body>
+
+</html>

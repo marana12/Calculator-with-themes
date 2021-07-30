@@ -1,0 +1,42 @@
+@media(max-width:500px){
+    .calculator{
+        width: 87%;
+    }
+}
+@media(max-width:375px){
+    .calculator{
+        margin: 40px auto;
+    }
+    #screen {
+        height: 100px;
+        input[type=text]{
+            font-size: 60px;
+        }
+    }
+    #buttons{
+        padding-top: 20px;
+        .row{
+            grid-template-columns: repeat(4, 22.5%);
+            align-content: center;
+            justify-content: center;
+        }
+        .last-row{
+            grid-template-columns: repeat(2, 45.5%);
+            align-content: center;
+            justify-content: center;
+        }
+        .row,.last-row{
+            .buttons{
+                height: 60px;
+                margin: 0 5px;
+            }
+            >.buttons:first-child{
+                margin-left: 0;
+            }
+            >.buttons:last-child{
+                margin-right: 0;
+            }
+        }
+
+    }
+}

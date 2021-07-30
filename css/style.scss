@@ -1,0 +1,291 @@
+@import './variables';
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Spartan', sans-serif;
+}
+.block{
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+}
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    a{
+        text-decoration: none;
+    }
+  }
+
+
+.theme1{
+    background: $main_background_1;
+
+    header{
+        color: $white;
+    }
+    #swicth{
+        background-color:$secondary_background_1 ;
+    }
+    #screen{
+        background: $screen_background_1;
+        #calcInput{
+            color: $white;
+        }
+    }
+    #buttons{
+        background: $secondary_background_1;
+    }
+    .btn-calc-func{
+        background: $key_background_1;
+        box-shadow: 0 5px $key_shadow_1;
+        color: $white;
+        &:active{
+            box-shadow: 0 1.5px $key_shadow_1;
+        }
+    }
+    .btn-calc-prod{
+        color: $very_dark_grayish;
+        background: $light_grayish_orange;
+        box-shadow: 0 5px $grayish_orange;
+        &:active{
+            box-shadow: 0 1.5px $grayish_orange;
+        }
+    }
+    .btn-calc-equal{
+        color: $white;
+        background-color: $red;
+        box-shadow: 0 5px $dark_red;
+        &:active{
+            box-shadow: 0 1.5px $dark_red;
+        }
+    }
+
+    .attribution{
+        color: $white;
+        a{
+            color: $key_background_1;
+        }
+      }
+}
+
+.theme2{
+    background: $main_background_2;
+    color: $white;
+    header{
+        color: $very_dark_grayish;
+    }
+    #swicth{
+        background-color:$secondary_background_2 ;
+    }
+    #screen{
+        background: $screen_background_2;
+        input{
+            color: $very_dark_grayish;
+        }
+    }
+    #buttons{
+        background: $secondary_background_2;
+    }
+
+    .btn-calc-func{
+        background: $key_background_2;
+        box-shadow: 0 5px $key_shadow_2;
+        color: $white;
+        &:active{
+            box-shadow: 0 1.5px $key_shadow_2;
+        }
+    }
+    .btn-calc-prod{
+        background: $light_grayish_yellow;
+        box-shadow: 0 5px $dark_grayish_orange;
+        color: $very_dark_grayish;
+        &:active{
+            box-shadow: 0 1.5px $dark_grayish_orange;
+        }
+    }
+    .btn-calc-equal{
+        color: $white;
+        background-color: $orange;
+        box-shadow: 0 5px $dark_orange;
+        &:active{
+            box-shadow: 0 1.5px $dark_orange;
+        } 
+
+    }
+    .attribution{
+        color: $very_dark_grayish;
+      }
+}
+.theme3{
+    background: $main_background_3;
+    header{
+        color: $light_yellow;
+    }
+    #swicth{
+        background-color:$secondary_screen__background_3 ;
+    }
+    #screen{
+        background: $secondary_screen__background_3;
+        
+        #calcInput{
+            color: $white;
+        }
+    }
+    #buttons{
+        background: $secondary_screen__background_3;
+    }
+    .btn-calc-func{
+        background: $key_background_3;
+        color: $white;
+        box-shadow: 0 5px $key_shadow_3;
+        &:active{
+            box-shadow: 0 1.5px $key_shadow_3;
+        } 
+    }
+    .btn-calc-prod{
+        background: $very_dark_violet;
+        color: $light_yellow;
+        box-shadow: 0 5px $dark_magenta;
+        &:active{
+            box-shadow: 0 1.5px $dark_magenta;
+        } 
+    }
+    .btn-calc-equal{
+        color: $very_dark_blue;
+        background-color: $pure_cyan;
+        box-shadow: 0 5px $soft_cyan;
+        &:active{
+            box-shadow: 0 1.5px $soft_cyan;
+        } 
+    }
+    .attribution{
+        color: $light_yellow;
+      }
+}
+header{
+    min-height: 80px;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    .title{
+        line-height: 80px;
+    }
+    .dflex{
+        display: flex;
+        justify-content: end;
+        .text{
+            font-size: 14px;
+            align-self: end;
+            margin-right: 20px;
+        }
+    }
+}
+#swicth,#theme-title{
+    display: grid;
+    grid-template-columns: repeat(3,33.3%);
+    width: 80px;
+    text-align: center;
+
+}
+#swicth{
+
+    height: 30px;
+    border-radius: 100px;
+    background: $white;
+    .toggle-ball{
+        cursor: pointer;
+        text-indent: -99999px;
+        position: relative;
+        display: block;
+        &::after{
+            visibility: hidden;
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            right: 5px;
+            width: 20px;
+            height: 20px;
+            border-radius: 100px;
+            content: '';
+        }
+        &.active::after{
+            visibility: visible;
+        }
+        &#theme1Toggle::after{
+            background: $red;
+        }
+        &#theme2Toggle::after{
+            background: $orange;
+        }
+        &#theme3Toggle::after{
+            background: $pure_cyan;
+        }
+
+    }
+
+}
+
+.calculator{
+    width: 545px;
+    height: 730px;
+    margin: 80px auto;
+}
+
+.section{
+    margin: 22.5px 0;
+    border-radius: 10px;
+    width: 100%;
+}
+#screen{
+    height: 125px;
+    input[type=text]{
+        display: block;
+        width: 95%;
+        height: 100%;
+        background: transparent;
+        border: none;
+        text-align: right;
+        font-size: 75px;
+        font-weight: bold;
+        margin: 0 auto;
+    };
+    input[type=text]:focus-visible{
+        outline: none;
+    };
+}
+#buttons{
+    height: 475px;
+    display: grid;
+    grid-template-columns: 100%;
+    padding-top: 25px;
+    .last-row,.row{
+        display: grid;
+        >.buttons:first-child{
+            margin-left: 20px;
+        }
+        >.buttons:last-child{
+            margin-right: 20px;
+        }
+        >.buttons{
+            cursor: pointer;
+            text-align: center;
+            height: 70px;
+            line-height: 70px;
+            font-size: 25px;
+            margin: 0 10px;
+            border-radius: 5px;
+            transition: all 0.2s;
+        }
+    }
+    .row{
+        grid-template-columns:repeat(4,25%);
+    }
+    .last-row{
+        grid-template-columns:repeat(2,50%);
+
+    }
+}
+

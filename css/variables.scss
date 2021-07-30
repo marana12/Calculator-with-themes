@@ -1,0 +1,55 @@
+// --Theme 1--
+    //Backgrounds
+    $main_background_1:hsl(222, 26%, 31%);//Very dark desaturated blue (main background)
+    $secondary_background_1:hsl(223, 31%, 20%);//Very dark desaturated blue (toggle background, keypad background)
+    $screen_background_1:hsl(224, 36%, 15%);//Very dark desaturated blue (screen background)
+    //Keys
+    $key_background_1:hsl(225, 21%, 49%);//Desaturated dark blue
+    $key_shadow_1:hsl(224, 28%, 35%);//Desaturated dark blue
+    $red:hsl(6, 63%, 50%);//key background, toggle
+    $dark_red:hsl(6, 70%, 34%);//key shadow
+    $light_grayish_orange:hsl(30, 25%, 89%);//key background
+    $grayish_orange:hsl(28, 16%, 65%);//key shadow
+    //Text
+    $very_dark_grayish: hsl(221, 14%, 31%);//blue
+    $white: #fff;
+
+// --Theme 2--
+    //Backgrounds
+    $main_background_2:hsl(0, 0%, 90%);//Light gray (main background)
+    $secondary_background_2: hsl(0, 5%, 81%);//Grayish red (toggle background, keypad background)
+    $screen_background_2: hsl(0, 0%, 93%);//Very light gray (screen background)
+ 
+    //Keys
+    $key_background_2: hsl(185, 42%, 37%);//Dark moderate cyan (key background)
+    $key_shadow_2: hsl(185, 58%, 25%);//Very dark cyan (key shadow)
+    $orange : hsl(25, 98%, 40%);//(key background, toggle)
+    $dark_orange : hsl(25, 99%, 27%);//(key shadow)
+    $light_grayish_yellow : hsl(45, 7%, 89%);//(key background)
+    $dark_grayish_orange : hsl(35, 11%, 61%);//(key shadow)
+
+    //Text
+    $very_dark_grayish_yellow: hsl(60, 10%, 19%);
+    // $white: #fff;//(text)
+
+//--Theme 3--
+
+    //Backgrounds
+    
+    $main_background_3: hsl(268, 75%, 9%);// Very dark violet (main background)
+    $secondary_screen__background_3: hsl(268, 71%, 12%);//Very dark violet (toggle background, keypad background, screen background)
+    
+    //Keys
+    $key_background_3: hsl(281, 89%, 26%);//Dark violet (key background)
+    $key_shadow_3: hsl(285, 91%, 52%);//Vivid magenta (key shadow)
+    
+    $pure_cyan: hsl(176, 100%, 44%);//Pure cyan (key background, toggle)
+    $soft_cyan: hsl(177, 92%, 70%);//Soft cyan (key shadow)
+    
+    $very_dark_violet: hsl(268, 47%, 21%);//Very dark violet (key background)
+    $dark_magenta: hsl(290, 70%, 36%);//Dark magenta (key shadow)
+    
+    //Text
+    $light_yellow: hsl(52, 100%, 62%);//Light yellow
+    $very_dark_blue: hsl(198, 20%, 13%);//Very dark blue
+    // - White (text): hsl(0, 0, 100%);
